@@ -41,14 +41,22 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')) {
                 clearDisplay();
                 updateDisplay();
+            } else if(buttons[i].classList.contains('square')) {
+                inputSquare(displayValue);
+                updateDisplay();
+            }
         }
     )}
 }
 
 clickButton();
+
+function inputSquare(num){
+    displayValue = (num * num).toString();
+}
 
 function inputOperand(operand) {
     if(firstOperator === null) {
