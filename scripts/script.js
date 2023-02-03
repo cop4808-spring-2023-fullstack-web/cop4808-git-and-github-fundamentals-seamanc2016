@@ -47,6 +47,9 @@ function clickButton() {
             } else if(buttons[i].classList.contains('square')) {
                 inputSquare(displayValue);
                 updateDisplay();
+            } else if(buttons[i].classList.contains('square-root')) {
+                inputSquareRoot(displayValue);
+                updateDisplay();
             }
         }
     )}
@@ -56,6 +59,10 @@ clickButton();
 
 function inputSquare(num){
     displayValue = (num * num).toString();
+}
+
+function inputSquareRoot(num){
+    displayValue = (num ** 0.5).toString();
 }
 
 function inputOperand(operand) {
