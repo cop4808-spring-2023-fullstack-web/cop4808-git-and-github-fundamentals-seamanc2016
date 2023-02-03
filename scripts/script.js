@@ -50,6 +50,9 @@ function clickButton() {
             } else if(buttons[i].classList.contains('square-root')) {
                 inputSquareRoot(displayValue);
                 updateDisplay();
+            } else if(buttons[i].classList.contains('log-10')) {
+                inputLogBase10(displayValue);
+                updateDisplay();
             }
         }
     )}
@@ -64,6 +67,12 @@ function inputSquare(num){
 function inputSquareRoot(num){
     displayValue = (num ** 0.5).toString();
 }
+
+function inputLogBase10(num){
+    displayValue = Math.log10(num).toString();
+}
+
+
 
 function inputOperand(operand) {
     if(firstOperator === null) {
