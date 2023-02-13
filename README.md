@@ -16,3 +16,4 @@ In this assignment, I was tasked with extending the "CALC YA LATER" calculator a
 
 # Bugfixes
 - Fixed a bug that prevented users from entering operands with the same prefix. For example, it was not possible to enter the equation "1 * 11".
+- Fixed a bug that prevented users from using shift-key characters.
