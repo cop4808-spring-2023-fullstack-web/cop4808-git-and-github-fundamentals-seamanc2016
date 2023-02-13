@@ -4,6 +4,7 @@ let secondOperand = null;
 let firstOperator = null;
 let secondOperator = null;
 let result = null;
+let runOnlyOnce = false;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
@@ -94,8 +95,9 @@ function inputOperand(operand) {
         }
     } else {
         //3rd/5th click - inputs to secondOperand
-        if(displayValue === firstOperand) {
+        if(displayValue === firstOperand && runOnlyOnce === false) {
             displayValue = operand;
+            runOnlyOnce = true;
         } else {
             displayValue += operand;
         }
@@ -143,6 +145,7 @@ function inputEquals() {
             firstOperator = null;
             secondOperator = null;
             result = null;
+            runOnlyOnce = false;
         }
     } else {
         //handles first operation
@@ -157,6 +160,7 @@ function inputEquals() {
             firstOperator = null;
             secondOperator = null;
             result = null;
+            runOnlyOnce = false;
         }
     }
 }
@@ -185,6 +189,7 @@ function clearDisplay() {
     firstOperator = null;
     secondOperator = null;
     result = null;
+    runOnlyOnce = false;
 }
 
 function inputBackspace() {

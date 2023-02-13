@@ -13,3 +13,6 @@ In this assignment, I was tasked with extending the "CALC YA LATER" calculator a
 
 ## Pi Button
 ![Imgur](https://i.imgur.com/76vgkXw.gif)
+
+# Bugfixes
+- Fixed a bug that prevented users from entering operands with the same prefix. For example, it was not possible to enter the equation "1 * 11".
